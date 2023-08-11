@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "brand": "Atlas",
+    "name": "True Fit",
+    "description": "dome head shape; snugg fit",
+    "link": "https://www.undercovercondoms.com/atlas-true-fit-condoms/",
+    "type": "external",
+    "width": "45",
+    "length": "180",
+    "material": "latex",
+    "texture": "",
+    "lubricated": "true",
+    "hasVLabel": "false"
+  },
+  {
+    "id": 1,
+    "brand": "RFSU",
+    "name": "Mamba",
+    "description": "contoured tight fit",
+    "link": "https://luckybloke.refersion.com/l/689.2043",
+    "type": "external",
+    "width": "50",
+    "length": "175",
+    "material": "vegan latex",
+    "texture": "",
+    "lubricated": "true",
+    "hasVLabel": "true"
+  }
+]
