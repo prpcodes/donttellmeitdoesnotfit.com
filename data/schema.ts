@@ -6,15 +6,16 @@ export const taskSchema = z.object({
   id: z.number(),
   brand: z.string(),
   name: z.string(),
-  width: z.string(),
-  length: z.string(),
+  width: z.number(),
+  length: z.number(),
+  thickness: z.number(),
   description: z.string(),
   link: z.string(),
   type: z.string(),
   texture: z.string(),
   material: z.string(),
-  lubricated: z.string(),
-  isVegan: z.string(),
+  lubricant: z.string(),
+  isVegan: z.boolean(),
 });
 
 export type Task = z.infer<typeof taskSchema>;

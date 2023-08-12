@@ -85,6 +85,21 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
   {
+    accessorKey: "thickness",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Thickness" />
+    ),
+    cell: ({ row }) => {
+      return (
+        <div className="flex space-x-2">
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("thickness")} mm
+          </span>
+        </div>
+      );
+    },
+  },
+  {
     accessorKey: "type",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Type" />
@@ -127,15 +142,15 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
   {
-    accessorKey: "lubricated",
+    accessorKey: "lubricant",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Lubricated" />
+      <DataTableColumnHeader column={column} title="Lubricant" />
     ),
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("lubricated")}
+            {row.getValue("lubricant")}
           </span>
         </div>
       );

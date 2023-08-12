@@ -8,6 +8,8 @@ import { DataTable } from "@/components/data-table";
 import { taskSchema } from "@/data/schema";
 import { ModeToggle } from "@/components/mode-toggle";
 import { TutorialDialog } from "@/components/tutorial-dialog";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
   title: "DontTellMeItDoesNotFit",
@@ -38,37 +40,35 @@ export const metadata: Metadata = {
   },
 };
 
-// Simulate a database read for tasks.
-async function getCondoms() {
-  const data = await fs.readFile(path.join(process.cwd(), "data.json"));
+export const dynamic = "force-dynamic";
 
-  const tasks = JSON.parse(data.toString());
+export default async function CondomsPage() {
+  const supabase = createServerComponentClient({ cookies });
+  const { data, error } = await supabase.from("condoms").select("*");
 
-  return z.array(taskSchema).parse(tasks);
-}
-
-export default async function TaskPage() {
-  const condoms = await getCondoms();
+  if (error) {
+    throw error;
+  }
 
   return (
     <>
-      <div className="flex items-start justify-between text-muted-foreground">
+      <div className="flex items-start justify-between">
         <div className="max-w-screen-md">
           <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
             Find Your Condom!
           </h1>
-          <p className="mt-6 ">
+          <p className="mt-6 text-muted-foreground">
             Say goodbye to the guesswork and hello to accurate comfort.
           </p>
-          <p className="mt-4">
+          <p className="mt-4 text-muted-foreground">
             Alright, legends of exceptional proportions, we&apos;ve heard it all
             - &apos;too big for the ordinary&apos;. But guess what? This tool
             quickly narrows down the best options to fit your needs.
           </p>
-          <p className="mt-6">
+          <p className="mt-6 text-muted-foreground">
             Don&apos;t know how to measure you penis? <TutorialDialog />
           </p>
-          <p className="text-sm">
+          <p className="text-sm text-muted-foreground">
             The affiliate links below are being used to fund this project.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default async function TaskPage() {
           <ModeToggle />
         </div>
       </div>
-      <DataTable data={condoms} columns={columns} />
+      <DataTable data={data} columns={columns} />
     </>
   );
 }
