@@ -1,16 +1,13 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { Metadata } from "next";
-import Image from "next/image";
 import { z } from "zod";
 
 import { columns } from "@/components/columns";
 import { DataTable } from "@/components/data-table";
-import { UserNav } from "@/components/user-nav";
 import { taskSchema } from "@/data/schema";
 import { ModeToggle } from "@/components/mode-toggle";
 import { TutorialDialog } from "@/components/tutorial-dialog";
-import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "DontTellMeItDoesNotFit",
@@ -27,14 +24,15 @@ export const metadata: Metadata = {
   ],
   creator: "PRP.CODES",
   openGraph: {
-    url: "https://www.donttellmeitdoesnotfit.com/",
+    type: "website",
     title: "Don't Tell Me It Does Not Fit",
     description:
       "Find your ideal condom size without sifting through countless charts.",
-    siteName: "DontTellMeItDoesNotFit",
+    siteName: "Don't Tell Me It Does Not Fit",
+    url: "https://www.donttellmeitdoesnotfit.com",
     images: [
       {
-        url: "https://www.donttellmeitdoesnotfit.com/banana.png",
+        url: "https://www.donttellmeitdoesnotfit.com/openGraph.jpg",
       },
     ],
   },
