@@ -5,7 +5,6 @@ import { ColumnDef } from "@tanstack/react-table";
 import { isVegan, types } from "@/data/data";
 import { Task } from "@/data/schema";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
-// import Image from "next/image";
 
 export const columns: ColumnDef<Task>[] = [
   {
