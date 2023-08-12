@@ -2,14 +2,10 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 
-import { Badge } from "@/components/ui/badge";
-import { Checkbox } from "@/components/ui/checkbox";
-
-import { hasVLabel, labels, priorities, statuses, types } from "@/data/data";
+import { isVegan, types } from "@/data/data";
 import { Task } from "@/data/schema";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
 // import Image from "next/image";
-import Link from "next/link";
 
 export const columns: ColumnDef<Task>[] = [
   {
@@ -147,13 +143,13 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
   {
-    accessorKey: "hasVLabel",
+    accessorKey: "isVegan",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="V-Label" />
     ),
     cell: ({ row }) => {
-      const label = hasVLabel.find(
-        (label) => label.value === row.getValue("hasVLabel")
+      const label = isVegan.find(
+        (label) => label.value === row.getValue("isVegan")
       );
 
       if (!label) {
@@ -175,7 +171,7 @@ export const columns: ColumnDef<Task>[] = [
     },
 
     filterFn: (row, id, value) => {
-      return value.includes(row.getValue("hasVLabel"));
+      return value.includes(row.getValue("isVegan"));
     },
   },
   {

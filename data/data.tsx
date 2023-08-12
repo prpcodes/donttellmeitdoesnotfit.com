@@ -113,7 +113,7 @@ export const types = [
   },
 ];
 
-export const hasVLabel = [
+export const isVegan = [
   {
     label: "Yes",
     value: "true",

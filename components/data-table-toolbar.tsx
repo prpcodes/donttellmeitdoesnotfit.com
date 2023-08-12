@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DataTableViewOptions } from "@/components/data-table-view-options";
 
-import { hasVLabel, materials, priorities, statuses, types } from "@/data/data";
+import { isVegan, materials, priorities, statuses, types } from "@/data/data";
 import { DataTableFacetedFilter } from "@/components/data-table-faceted-filter";
 import { Slider } from "@/components/ui/slider";
 
@@ -61,11 +61,11 @@ export function DataTableToolbar<TData>({
             options={types}
           />
         )}
-        {table.getColumn("hasVLabel") && (
+        {table.getColumn("isVegan") && (
           <DataTableFacetedFilter
-            column={table.getColumn("hasVLabel")}
+            column={table.getColumn("isVegan")}
             title="V-Label"
-            options={hasVLabel}
+            options={isVegan}
           />
         )}
         {isFiltered && (

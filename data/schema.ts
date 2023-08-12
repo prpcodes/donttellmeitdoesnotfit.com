@@ -14,7 +14,7 @@ export const taskSchema = z.object({
   texture: z.string(),
   material: z.string(),
   lubricated: z.string(),
-  hasVLabel: z.string(),
+  isVegan: z.string(),
 });
 
 export type Task = z.infer<typeof taskSchema>;
