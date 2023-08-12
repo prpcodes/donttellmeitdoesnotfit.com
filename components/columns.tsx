@@ -110,7 +110,7 @@ export const columns: ColumnDef<Task>[] = [
       );
     },
     filterFn: (row, id, value) => {
-      return value.includes(row.getValue(id));
+      return value.includes(row.getValue("type"));
     },
   },
   {
@@ -126,6 +126,9 @@ export const columns: ColumnDef<Task>[] = [
           </span>
         </div>
       );
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue("material"));
     },
   },
   {
@@ -169,6 +172,10 @@ export const columns: ColumnDef<Task>[] = [
           </span>
         </div>
       );
+    },
+
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue("hasVLabel"));
     },
   },
   {

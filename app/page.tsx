@@ -9,6 +9,7 @@ import { DataTable } from "@/components/data-table";
 import { UserNav } from "@/components/user-nav";
 import { taskSchema } from "@/data/schema";
 import { ModeToggle } from "@/components/mode-toggle";
+import { TutorialDialog } from "@/components/tutorial-dialog";
 
 export const metadata: Metadata = {
   title: "Tasks",
@@ -29,17 +30,21 @@ export default async function TaskPage() {
 
   return (
     <div className="flex flex-col flex-1 w-screen h-screen px-8 pt-8 space-y-8">
-      <div className="flex items-start justify-between space-y-2">
-        <div>
+      <div className="flex items-start justify-between">
+        <div className="max-w-screen-md">
           <h1 className="text-3xl font-bold ">Find Your Condom Size!</h1>
-          <p className="max-w-screen-md text-muted-foreground">
-            Say goodbye to the guesswork and hello to accurate comfort. Find
-            your ideal condom size without sifting through charts - this tool
-            quickly narrows down the best options to fit your needs.
+          <p className="text-muted-foreground">
+            Say goodbye to the guesswork and hello to accurate comfort.
+          </p>
+          <p className="mt-3 text-muted-foreground">
+            Find your ideal condom size without sifting through charts - this
+            tool quickly narrows down the best options to fit your needs.
+            Don&apos;t know how to measure you penis? <TutorialDialog />
           </p>
         </div>
-
-        <ModeToggle />
+        <div className="hidden sm:flex">
+          <ModeToggle />
+        </div>
       </div>
       <DataTable data={condoms} columns={columns} />
     </div>
