@@ -29,18 +29,21 @@ export default async function TaskPage() {
   const condoms = await getCondoms();
 
   return (
-    <div className="flex flex-col flex-1 w-screen h-screen px-8 pt-8 space-y-8">
+    <div className="flex flex-col flex-1 w-screen h-screen px-8 pt-8 space-y-4">
       <div className="flex items-start justify-between">
         <div className="max-w-screen-md">
-          <h1 className="text-3xl font-bold ">Find Your Condom Size!</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
+            Find Your Condom!
+          </h1>
+          <p className="[&:not(:first-child)]:mt-6 text-muted-foreground">
             Say goodbye to the guesswork and hello to accurate comfort.
           </p>
-          <p className="mt-3 text-muted-foreground">
+          <p className="[&:not(:first-child)]:mt-6 text-muted-foreground">
             Find your ideal condom size without sifting through charts - this
             tool quickly narrows down the best options to fit your needs.
-            Don&apos;t know how to measure you penis? <TutorialDialog />
+            Don&apos;t know how to measure you penis?
           </p>
+          <TutorialDialog />
         </div>
         <div className="hidden sm:flex">
           <ModeToggle />
