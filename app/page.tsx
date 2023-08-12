@@ -37,12 +37,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "app",
-    site: "@site",
-    creator: "@creator",
-    images: "https://www.donttellmeitdoesnotfit.com/banana.png",
-  },
 };
 
 // Simulate a database read for tasks.
