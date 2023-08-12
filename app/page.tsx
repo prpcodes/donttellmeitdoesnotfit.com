@@ -10,6 +10,7 @@ import { UserNav } from "@/components/user-nav";
 import { taskSchema } from "@/data/schema";
 import { ModeToggle } from "@/components/mode-toggle";
 import { TutorialDialog } from "@/components/tutorial-dialog";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "DontTellMeItDoesNotFit",
@@ -52,7 +53,7 @@ export default async function TaskPage() {
   const condoms = await getCondoms();
 
   return (
-    <div className="flex flex-col flex-1 w-screen h-screen px-8 pt-8 space-y-4">
+    <>
       <div className="flex items-start justify-between">
         <div className="max-w-screen-md">
           <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
@@ -76,6 +77,6 @@ export default async function TaskPage() {
         </div>
       </div>
       <DataTable data={condoms} columns={columns} />
-    </div>
+    </>
   );
 }
