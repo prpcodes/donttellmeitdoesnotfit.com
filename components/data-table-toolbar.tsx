@@ -64,7 +64,7 @@ export function DataTableToolbar<TData>({
         {table.getColumn("isVegan") && (
           <DataTableFacetedFilter
             column={table.getColumn("isVegan")}
-            title="V-Label"
+            title="Vegan"
             options={isVegan}
           />
         )}

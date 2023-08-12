@@ -145,7 +145,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "isVegan",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="V-Label" />
+      <DataTableColumnHeader column={column} title="Vegan" />
     ),
     cell: ({ row }) => {
       const label = isVegan.find(
@@ -158,11 +158,6 @@ export const columns: ColumnDef<Task>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          {/* 
-          {label.value === true && (
-            <Image src="/v-label.svg" width={24} height={24} alt="Yes" />
-          )} 
-          */}
           <span className="max-w-[50px] truncate font-medium">
             <span>{label.label}</span>
           </span>
