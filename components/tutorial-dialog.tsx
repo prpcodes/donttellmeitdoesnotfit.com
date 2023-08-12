@@ -15,7 +15,7 @@ export function TutorialDialog() {
       <DialogTrigger asChild>
         <Button
           variant="link"
-          className="p-0 m-0 underline decoration-primary text-muted-foreground"
+          className="p-0 text-base underline decoration-primary text-muted-foreground"
         >
           We got your back!
         </Button>
@@ -32,7 +32,7 @@ export function TutorialDialog() {
               <li>
                 Place the measuring tape or string at the base of your{" "}
                 <b>ERECT</b> penis and measure from the bottom to the top, make
-                sure your penis is central and straight.
+                sure your penis is <b>central</b> and <b>straight</b>.
               </li>
               <li>
                 Measure all the way around your <b>ERECT</b> penis at the
@@ -40,8 +40,8 @@ export function TutorialDialog() {
                 (choose the widest part).
               </li>
               <li>
-                <b>Divide</b> your penis circumference by <b>2.25</b> to make up
-                for the about 10% to 20% stretch.
+                Divide your penis circumference by <b>2.25</b> to make up for
+                the about 10% to 20% stretch.
               </li>
             </ol>
           </DialogDescription>
