@@ -12,12 +12,12 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { TutorialDialog } from "@/components/tutorial-dialog";
 
 export const metadata: Metadata = {
-  title: "DonTellMeItDoesNotFit",
+  title: "DontTellMeItDoesNotFit",
   description:
     "Find your ideal condom size without sifting through countless charts.",
   icons:
     "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍌</text></svg>",
-  applicationName: "DonTellMeItDoesNotFit",
+  applicationName: "DontTellMeItDoesNotFit",
   keywords:
     "Condom size selection, Fitting condoms, Find your perfect fit, Condom size calculator, Comfortable protection, Get the right size, Condom size guide, Size-specific condoms, Perfect fit condoms, Proper protection, Size-conscious safety, Comfort and safety, Your size, your safety, Best fit condoms, Condom size recommendations, Confidence in protection, Custom condom options, Size-appropriate safety, Your comfort matters, Condoms for every size, Ensuring the right fit, Avoid discomfort, Secure fit condoms, Maximum comfort protection, Choosing the right condom size, Size-driven safety",
   themeColor: [
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   creator: "PRP.CODES",
   openGraph: {
     url: "https://www.donttellmeitdoesnotfit.com/",
-    title: "DonTellMeItDoesNotFit",
+    title: "Don't Tell Me It Does Not Fit",
     description:
       "Find your ideal condom size without sifting through countless charts.",
-    siteName: "DonTellMeItDoesNotFit",
+    siteName: "DontTellMeItDoesNotFit",
     images: [
       {
         url: "https://www.donttellmeitdoesnotfit.com/banana.png",
