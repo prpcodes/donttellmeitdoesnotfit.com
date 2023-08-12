@@ -58,7 +58,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "width",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Base With" />
+      <DataTableColumnHeader column={column} title="With" />
     ),
     cell: ({ row }) => {
       return (
