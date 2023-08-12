@@ -12,7 +12,7 @@ import { TutorialDialog } from "@/components/tutorial-dialog";
 export const metadata: Metadata = {
   title: "DontTellMeItDoesNotFit",
   description:
-    "Find your ideal condom size without sifting through countless charts.",
+    "Alright, legends of exceptional proportions, we've heard it all - 'too big for the ordinary'. But guess what? This tool quickly narrows down the best options to fit your needs. It's time to rock the perfect fit and wrap your goods in the comfort they deserve.",
   icons:
     "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍌</text></svg>",
   applicationName: "DontTellMeItDoesNotFit",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Don't Tell Me It Does Not Fit",
     description:
-      "Find your ideal condom size without sifting through countless charts.",
+      "Alright, legends of exceptional proportions, we've heard it all - 'too big for the ordinary'. But guess what? This tool quickly narrows down the best options to fit your needs. It's time to rock the perfect fit and wrap your goods in the comfort they deserve.",
     siteName: "Don't Tell Me It Does Not Fit",
     url: "https://www.donttellmeitdoesnotfit.com",
     images: [
@@ -52,21 +52,23 @@ export default async function TaskPage() {
 
   return (
     <>
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between text-muted-foreground">
         <div className="max-w-screen-md">
           <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
             Find Your Condom!
           </h1>
-          <p className="mt-6 text-muted-foreground">
+          <p className="mt-6 ">
             Say goodbye to the guesswork and hello to accurate comfort.
           </p>
-          <p className="mt-6 text-muted-foreground">
-            Find your ideal condom size without sifting through charts - this
-            tool quickly narrows down the best options to fit your needs.
-            Don&apos;t know how to measure you penis?
+          <p className="mt-4">
+            Alright, legends of exceptional proportions, we&apos;ve heard it all
+            - &apos;too big for the ordinary&apos;. But guess what? This tool
+            quickly narrows down the best options to fit your needs.
           </p>
-          <TutorialDialog />
-          <p className="mt-6 text-sm text-muted-foreground">
+          <p className="mt-6">
+            Don&apos;t know how to measure you penis? <TutorialDialog />
+          </p>
+          <p className="text-sm">
             The affiliate links below are being used to fund this project.
           </p>
         </div>
