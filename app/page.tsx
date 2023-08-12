@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 // Simulate a database read for tasks.
 async function getCondoms() {
-  const data = await fs.readFile(path.join(process.cwd(), "tasks.json"));
+  const data = await fs.readFile(path.join(process.cwd(), "data.json"));
 
   const tasks = JSON.parse(data.toString());
 
