@@ -24,15 +24,15 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between ">
       <div className="flex flex-wrap items-center flex-1 gap-2">
         <Input
-          placeholder="Filter by name..."
-          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter by brand..."
+          value={(table.getColumn("brand")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
+            table.getColumn("brand")?.setFilterValue(event.target.value)
           }
           className="h-8 w-[150px] lg:w-[250px]"
         />
         <Input
-          placeholder="Base Width..."
+          placeholder="Width..."
           value={table.getColumn("width")?.getFilterValue() as string}
           onChange={(event) =>
             table.getColumn("width")?.setFilterValue(event.target.value)
