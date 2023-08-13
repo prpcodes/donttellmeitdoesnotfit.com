@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DataTableViewOptions } from "@/components/data-table-view-options";
 
-import { isVegan, materials, types } from "@/data/data";
+import { isvegan, lubricants, materials, types } from "@/data/data";
 import { DataTableFacetedFilter } from "@/components/data-table-faceted-filter";
 
 interface DataTableToolbarProps<TData> {
@@ -53,6 +53,13 @@ export function DataTableToolbar<TData>({
             options={materials}
           />
         )}
+        {table.getColumn("lubricant") && (
+          <DataTableFacetedFilter
+            column={table.getColumn("lubricant")}
+            title="Lubricant"
+            options={lubricants}
+          />
+        )}
         {table.getColumn("type") && (
           <DataTableFacetedFilter
             column={table.getColumn("type")}
@@ -60,11 +67,11 @@ export function DataTableToolbar<TData>({
             options={types}
           />
         )}
-        {table.getColumn("isVegan") && (
+        {table.getColumn("isvegan") && (
           <DataTableFacetedFilter
-            column={table.getColumn("isVegan")}
+            column={table.getColumn("isvegan")}
             title="Vegan"
-            options={isVegan}
+            options={isvegan}
           />
         )}
         {isFiltered && (

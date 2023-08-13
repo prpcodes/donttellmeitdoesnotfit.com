@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 
-import { isVegan, types } from "@/data/data";
+import { isvegan, types } from "@/data/data";
 import { Task } from "@/data/schema";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
 
@@ -155,15 +155,18 @@ export const columns: ColumnDef<Task>[] = [
         </div>
       );
     },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue("lubricant"));
+    },
   },
   {
-    accessorKey: "isVegan",
+    accessorKey: "isvegan",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Vegan" />
     ),
     cell: ({ row }) => {
-      const label = isVegan.find(
-        (label) => label.value === row.getValue("isVegan")
+      const label = isvegan.find(
+        (label) => label.value === row.getValue("isvegan")?.toString()
       );
 
       if (!label) {
@@ -180,7 +183,7 @@ export const columns: ColumnDef<Task>[] = [
     },
 
     filterFn: (row, id, value) => {
-      return value.includes(row.getValue("isVegan"));
+      return value.includes(row.getValue("isvegan")?.toString());
     },
   },
   {
