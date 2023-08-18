@@ -2,6 +2,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
+import * as ackeeTracker from "ackee-tracker";
+
+ackeeTracker
+  .create("https://ackee-dj6u.onrender.com")
+  .record("b4456520-6bf7-44fc-83dd-6e3f88234832");
 
 const inter = Inter({ subsets: ["latin"] });
 
