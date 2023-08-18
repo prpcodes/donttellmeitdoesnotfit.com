@@ -11,6 +11,12 @@ import { TutorialDialog } from "@/components/tutorial-dialog";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
+import * as ackeeTracker from "ackee-tracker";
+
+ackeeTracker
+  .create("https://ackee-dj6u.onrender.com")
+  .record("b4456520-6bf7-44fc-83dd-6e3f88234832");
+
 export const metadata: Metadata = {
   title: "DontTellMeItDoesNotFit",
   description:
